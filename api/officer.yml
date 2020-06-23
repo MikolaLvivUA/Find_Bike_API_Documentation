@@ -1,0 +1,19 @@
+get:
+  summary: Get all officer
+  tags:
+    - officer
+  responses:
+    200:
+      description: Return all officer ojects
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  offcers:
+                    items:
+                      type: object
+                      $ref: '../models/officer.yml'

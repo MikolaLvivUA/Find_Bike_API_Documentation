@@ -1,0 +1,57 @@
+post:
+  summary: Add a new user
+  tags:
+    - user
+  requestBody:
+    description: A new user object
+    required: true
+    content:
+      application/json:
+        schema:
+          properties:
+            name:
+              type: string
+              description: The user name
+            surname:
+              type: string
+              description: the user surname
+            email:
+              type: string
+              description: the user email
+            password:
+              type: string
+              description: the user password
+            phone:
+              type: string
+              description: the user phone
+            age:
+              type: string
+              description: the user age
+  responses:
+    201:
+      description: Created
+    500:
+      description: InternalServerError
+
+
+get:
+  summary: Get all users
+  tags:
+    - user
+  responses:
+    200:
+      description: Return all users objects
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  users:
+                    items:
+                      type: object
+                      $ref: '../models/user.yml'
+    500:
+      description: InternalServerError

@@ -1,0 +1,21 @@
+get:
+  summary: Returns user by id
+  tags:
+    - user
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    200:
+      description: The user object
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                $ref: '../models/user.yml'

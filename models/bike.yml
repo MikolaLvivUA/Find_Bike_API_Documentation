@@ -1,0 +1,17 @@
+  properties:
+    _id:
+      type: string
+    serial_number:
+      type: string
+    color:
+      type: string
+    type:
+      type: string
+    description:
+      type: string
+    photo:
+      type: string
+    status:
+      type: string
+    createdAt:
+      type: string

@@ -1,0 +1,50 @@
+get:
+  summary: Returns officer by id
+  tags:
+    - officer
+  parameters:
+    - name: officerId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    200:
+      description: The officer object
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                $ref: '../models/officer.yml'
+
+patch:
+  summary: Add new job for officer
+  tags:
+    - officer
+  parameters:
+    - name: officerId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: A new job object
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            bike_id:
+              type: string
+              description: The finding bike id
+            job_status:
+              type: string
+              description: The offcer job status
+  responses:
+    201:
+      description: Created
+
