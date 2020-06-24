@@ -17,3 +17,26 @@ get:
                     items:
                       type: object
                       $ref: '../models/officer.yml'
+
+post:
+  summary: Create new officer
+  tags:
+    - officer
+  requestBody:
+    description: Creating data of new offcer
+    content:
+      application/json:
+        schema:
+          properties:
+            name:
+              type: string
+              description: The officer name
+            surname:
+              type: string
+              description: The officer surname
+            officer_number:
+              type: string
+              description: The officer number
+  responses:
+    201:
+      description: Created
