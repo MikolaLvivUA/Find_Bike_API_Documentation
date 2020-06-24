@@ -19,3 +19,17 @@ get:
               data:
                 type: object
                 $ref: '../models/officer.yml'
+
+delete:
+  summary: Delete offcer by id
+  tags:
+    - officer
+  parameters:
+    - name: officerId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    200:
+      description: oficer deleted
