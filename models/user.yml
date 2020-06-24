@@ -14,7 +14,7 @@ properties:
   phone:
     type: string
     description: The user phone
-  age:
+  year-of-birth:
     type: string
     description: The user phone
   bikes:

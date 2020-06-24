@@ -16,6 +16,12 @@ paths:
     $ref: 'api/user-id.yml'
 
   /users/{userId}/bikes:
+    $ref: 'api/user-id-bike.yml'
+
+  /users/{userId}/bikes/{bikeId}:
+    $ref: 'api/bike-id.yml'
+
+  /bikes/{bikeId}:
     $ref: 'api/bike.yml'
   #Officer
   /officer:
@@ -23,6 +29,13 @@ paths:
 
   /officer/{officerId}:
     $ref: 'api/officer-id.yml'
+
+  /officer/{officerId}/jobs:
+    $ref: 'api/officer-id-job.yml'
+
+  /officer/{officerId}/jobs/{jobId}:
+    $ref: 'api/job-id.yml'
+
 tags:
   - name: user
     description: User enpoints

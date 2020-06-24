@@ -24,7 +24,7 @@ post:
             phone:
               type: string
               description: the user phone
-            age:
+            year-of-birth:
               type: string
               description: the user age
   responses:
