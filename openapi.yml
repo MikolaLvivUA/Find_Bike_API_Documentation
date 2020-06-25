@@ -17,12 +17,9 @@ paths:
 
   /users/{userId}/bikes:
     $ref: 'api/user-id-bike.yml'
-
-  /users/{userId}/bikes/{bikeId}:
-    $ref: 'api/bike-id.yml'
-
+  #Bike
   /bikes/{bikeId}:
-    $ref: 'api/bike.yml'
+    $ref: 'api/bike-id.yml'
   #Officer
   /officer:
     $ref: 'api/officer.yml'
@@ -41,3 +38,5 @@ tags:
     description: User enpoints
   - name: officer
     description: Officer endpoints
+  - name: bike
+    description: Bike endpoints

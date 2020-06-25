@@ -11,25 +11,40 @@ post:
           properties:
             name:
               type: string
+              required: true
               description: The user name
             surname:
               type: string
+              required: true
               description: the user surname
             email:
               type: string
+              required: true
               description: the user email
             password:
               type: string
+              required: true
               description: the user password
             phone:
               type: string
+              required: true
               description: the user phone
             year-of-birth:
               type: string
+              format: date
+              required: true
               description: the user age
   responses:
     201:
       description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                $ref: '../models/new-user.yml'
     500:
       description: InternalServerError
 
@@ -47,11 +62,8 @@ get:
             type: object
             properties:
               data:
-                type: object
-                properties:
-                  users:
-                    items:
-                      type: object
-                      $ref: '../models/user.yml'
+                items:
+                  type: object
+                  $ref: '../models/user.yml'
     500:
       description: InternalServerError

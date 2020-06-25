@@ -8,3 +8,6 @@ properties:
   job_status:
     type: string
     description: The status finding bike
+  createdAt:
+    type: string
+    format: date-time

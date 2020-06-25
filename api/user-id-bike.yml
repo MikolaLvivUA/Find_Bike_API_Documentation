@@ -24,7 +24,7 @@ get:
                       type: object
                       $ref: '../models/bike.yml'
 
-patch:
+post:
   summary: Add a new bikes
   tags:
     - user
@@ -39,18 +39,23 @@ patch:
             properties:
               serial_number:
                 type: string
+                required: true
                 description: The bike serial_number
               color:
                 type: string
+                required: true
                 description: The bike color
               type:
                 type: string
+                required: true
                 description: The bike type
               description:
                 type: string
+                required: true
                 description: The bike description
               photo:
                 type: string
+                required: true
                 format: binary
                 description: The bike photo
   responses:

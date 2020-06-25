@@ -11,11 +11,6 @@ properties:
   officer_number:
     type: string
     description: The officer number
-  jobs:
-    items:
-      type: object
-      description: The officer current procces of finding bike
-      $ref: 'job.yml'
   createdAt:
     type: string
     format: date-time

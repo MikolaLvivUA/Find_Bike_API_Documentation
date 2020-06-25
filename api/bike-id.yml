@@ -1,13 +1,30 @@
-patch:
-  summary: Update bike by id
+get:
+  summary: return bike object by id
   tags:
-    - user
+    - bike
   parameters:
-    - name: userId
+    - name: bikeId
       in: path
       required: true
       schema:
         type: string
+  responses:
+    200:
+      description: Returns bike object
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                $ref: '../models/bike.yml'
+
+patch:
+  summary: Update bike by id
+  tags:
+    - bike
+  parameters:
     - name: bikeId
       in: path
       required: true
@@ -53,18 +70,13 @@ patch:
 delete:
   summary: delete bike by id
   tags:
-    - user
+    - bike
   parameters:
-    - name: userId
-      in: path
-      required: true
-      schema:
-        type: string
     - name: bikeId
       in: path
       required: true
       schema:
         type: string
   responses:
-    200:
+    204:
       description: bike deleted

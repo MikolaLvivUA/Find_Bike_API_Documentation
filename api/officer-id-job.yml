@@ -24,7 +24,7 @@ get:
                       type: object
                       $ref: '../models/job.yml'
 
-patch:
+post:
   summary: Add new job for officer
   tags:
     - officer
@@ -44,10 +44,20 @@ patch:
           properties:
             bike_id:
               type: string
+              required: true
               description: The finding bike id
             job_status:
               type: string
+              required: true
               description: The offcer job status
   responses:
     201:
       description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                $ref: '../models/job.yml'

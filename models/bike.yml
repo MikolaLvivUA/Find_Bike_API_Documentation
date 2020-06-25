@@ -21,3 +21,4 @@
       description: The finding status
     createdAt:
       type: string
+      format: date-time

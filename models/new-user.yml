@@ -18,12 +18,6 @@ properties:
     type: string
     format: date
     description: The user phone
-  bikes:
-    type: array
-    description: The user bikes
-    items:
-      type: object
-      $ref: 'bike.yml'
   createdAt:
     type: string
     format: date-time
